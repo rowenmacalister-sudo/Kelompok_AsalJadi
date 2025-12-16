@@ -28,5 +28,27 @@ begin
     his[acc[i].history_c].waktu := t;
 end;
 
+procedure showhis(i:integer);
+var b : integer;
+begin
+    clrscr;
+    writeln('=== RIWAYAT TRANSAKSI ', acc[i].username, ' ===');
+
+    if acc[i].history_c = 0 then
+    begin
+        writeln('Belum ada transaksi.');
+        readln;
+        exit;
+    end;
+
+    for b:= 1 to acc[i].history_c do
+    begin
+        writeln(b, '. ', his[b].deskripsi, ' - Rp', his[b].nominal);
+        writeln('   Waktu: ', his[b].waktu);
+        readln;
+    end;
+end;
+
+
 begin
 end.

@@ -18,6 +18,15 @@ var
     his : array[1..100] of history;
     t_acc : integer = 0;
 
+procedure addhis(i:integer; des:string; nominal:longint);
+var t:string;
+begin
+    t := DateTimeToStr(Now);
+    inc(acc[i].history_c);
+    his[acc[i].history_c].deskripsi := des;
+    his[acc[i].history_c].nominal := nominal;
+    his[acc[i].history_c].waktu := t;
+end;
 
 begin
 end.

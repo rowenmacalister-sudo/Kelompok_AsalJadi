@@ -49,6 +49,33 @@ begin
     end;
 end;
 
+function sel : integer;
+var
+    i : integer;
+    key : char;
+begin
+    if t_acc = 0 then begin sel := -1; exit; end;
+
+    i := 1;
+    while true do
+    begin
+        clrscr;
+        writeln('=== PILIH AKUN ===');
+        writeln('Gunakan A/D, ENTER untuk pilih');
+        writeln('Akun: ', acc[i].username);
+
+        key := readkey;
+        case key of
+            'a','A' : dec(i);
+            'd','D' : inc(i);
+            #13 : begin sel := i; exit; end;
+        end;
+
+        if i < 1 then i := t_acc
+        else if i > t_acc then i := 1;
+    end;
+end;
+
 
 begin
 end.

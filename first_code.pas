@@ -13,6 +13,7 @@ type
         nominal : longint;
         waktu : string;
     end;
+
 var
     acc : array[1..3] of account;
     his : array[1..100] of history;
@@ -75,7 +76,6 @@ begin
         else if i > t_acc then i := 1;
     end;
 end;
-
 
 begin
 end.

@@ -1,5 +1,5 @@
 program Mbanking;
-uses crt, SysUtils, uType;
+uses crt, SysUtils, second_code;
 
 procedure regis;
 begin

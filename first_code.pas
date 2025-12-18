@@ -4,7 +4,7 @@ type
     account = record
         username : string;
         PIN : string;
-        balance : integer;
+        balance; longint;
         history_c : integer;
     end;
 

@@ -1,4 +1,4 @@
-unit uType;
+unit second_code;
 
 interface
 uses SysUtils;

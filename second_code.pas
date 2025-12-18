@@ -1,4 +1,4 @@
-unit utype;
+unit uType;
 
 interface
 uses SysUtils;
@@ -17,13 +17,13 @@ type
         waktu : string;
     end;
 
-procedure addhis(i:integer; des:string; nominal:longint);
-procedure showhis(i:integer);
-
 var
     acc : array[1..3] of account;
     his : array[1..100] of history;
     t_acc : integer;
+
+procedure addhis(i:integer; des:string; nominal:longint);
+procedure showhis(i:integer);
 
 implementation
 uses crt;
@@ -43,6 +43,7 @@ var b : integer;
 begin
     clrscr;
     writeln('=== RIWAYAT TRANSAKSI ', acc[i].username, ' ===');
+
     if acc[i].history_c = 0 then
     begin
         writeln('Belum ada transaksi.');
@@ -57,4 +58,3 @@ begin
     end;
 end;
 end.
-

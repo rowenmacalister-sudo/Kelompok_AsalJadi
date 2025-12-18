@@ -85,12 +85,13 @@ begin
 
     inc(t_acc);
     clrscr;
-    write('Masukkan username: '); readln(acc[t_acc].username);
-    write('Masukkan PIN: '); readln(acc[t_acc].PIN);
-
-    acc[t_acc].balance := 0;
-    acc[t_acc].history_c := 0;
-
+    with acc[t_acc]
+    begin
+    write('Masukkan username: '); readln(username);
+    write('Masukkan PIN: '); readln(PIN);
+    balance := 0;
+    history_c := 0;
+    end;
     writeln('Akun berhasil dibuat!');
     readln;
 end;

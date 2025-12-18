@@ -1,5 +1,5 @@
 program Mbanking;
-uses crt, SysUtils;
+uses crt, SysUtils uType;
 type
     account = record
         username : string;

@@ -10,7 +10,7 @@ begin
     end;
     inc(t_acc);
     clrscr;
-    with acc[t_acc]) do
+    with acc[t_acc] do
     begin
         write('Masukkan username: '); readln(username);
         write('Masukkan PIN: '); readln(PIN);

@@ -1,8 +1,6 @@
 program Mbanking;
 uses crt, SysUtils, second_code;
 
-
-
 procedure login(i:integer);
 var pin:string;
 begin

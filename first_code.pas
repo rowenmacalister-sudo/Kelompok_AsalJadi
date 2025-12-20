@@ -54,3 +54,27 @@ begin
         end;
     until p = '4';
 end;
+
+var pilih:char; idx:integer;
+begin
+    t_acc := 0;
+    repeat
+        clrscr;
+        writeln('===== MBANKING =====');
+        writeln('1.   Register');
+        writeln('2.   Login');
+        writeln('3.   Keluar');
+        write('Pilih: '); pilih := readkey;
+        case pilih of
+            '1': regis;
+            '2': begin
+                    idx := pilihAkun;
+                    if idx <> -1 then
+                    begin
+                        login(idx);
+                        menu(idx);
+                    end;
+                 end;
+        end;
+    until pilih = '3';
+end.

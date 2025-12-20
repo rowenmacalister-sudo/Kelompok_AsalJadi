@@ -20,17 +20,6 @@ begin
     writeln('Akun berhasil dibuat!');
     readln;
 end;
-
-procedure login(i:integer);
-var pin:string;
-begin
-    repeat
-        clrscr;
-        write('Masukkan PIN: ');
-        readln(pin);
-    until pin = acc[i].PIN;
-end;
-
 procedure menu(i:integer);
 var p:char;
 begin

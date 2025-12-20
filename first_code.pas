@@ -20,6 +20,18 @@ begin
     writeln('Akun berhasil dibuat!');
     readln;
 end;
+
+procedure login(i : integer);
+var temp : string;
+begin
+    repeat
+    clrscr;
+    writeln('=== LOGIN ', acc[i].username, ' ===');
+    write('masukkan PIN: '); readln(temp);
+    if temp <> acc[i].PIN then write('PIN salah'); readln;
+    until temp = acc[i].PIN;
+end;
+
 procedure menu(i:integer);
 var p:char;
 begin

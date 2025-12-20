@@ -88,4 +88,26 @@ begin
     else writeln('Saldo tidak cukup.');
     readln;
 end;
+
+function pilihAkun:integer;
+var i:integer; k:char;
+begin
+    if t_acc = 0 then begin pilihAkun := -1; exit; end;
+    i := 1;
+    while true do
+    begin
+        clrscr;
+        writeln('Pilih akun (A/D, Enter(confirm)');
+        writeln(acc[i].username);
+        k := readkey;
+        case k of
+            'a','A': dec(i);
+            'd','D': inc(i);
+            #13: begin pilihAkun := i; exit; end;
+        end;
+        if i < 1 then i := t_acc;
+        if i > t_acc then i := 1;
+    end;
+end;
+
 end.

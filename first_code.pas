@@ -1,6 +1,27 @@
 program Mbanking;
 uses crt, SysUtils, second_code;
 
+procedure regis;
+begin
+    if t_acc = 3 then
+    begin
+        writeln('Maksimum 3 akun.');
+        readln;
+        exit;
+    end;
+    inc(t_acc);
+    clrscr;
+    with acc[t_acc]) do
+    begin
+        write('Masukkan username: '); readln(username);
+        write('Masukkan PIN: '); readln(PIN);
+        balance := 0;
+        history_c := 0;
+    end;
+    writeln('Akun berhasil dibuat!');
+    readln;
+end;
+
 procedure login(i:integer);
 var pin:string;
 begin

@@ -44,28 +44,17 @@ procedure showhis(i:integer);
 var b:integer;
 begin
     clrscr;
-    writeln('=== RIWAYAT ', acc[i].username, ' ===');
-
+    writeln('==== RIWAYAT ', acc[i].username, ' ====');
     if acc[i].history_c = 0 then
     begin
         writeln('Belum ada transaksi.');
         readln;
         exit;
     end;
-
     for b := 1 to acc[i].history_c do
     begin
-        writeln(b,'. ', acc[i].his[b].deskripsi,
-                ' Rp', acc[i].his[b].nominal);
+        writeln(b,'. ', acc[i].his[b].deskripsi,' Rp', acc[i].his[b].nominal);
         writeln('   ', acc[i].his[b].waktu);
-    end;
-    readln;
-end;
-
-    for b := 1 to acc[i].history_c do
-    begin
-        writeln(b,'. ',his[b].deskripsi,' Rp',his[b].nominal);
-        writeln('   ',his[b].waktu);
     end;
     readln;
 end;

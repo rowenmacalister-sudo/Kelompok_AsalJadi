@@ -1,5 +1,6 @@
 program Mbanking;
 uses crt, SysUtils, second_code;
+
 procedure regis;
 begin
     if t_acc = 3 then

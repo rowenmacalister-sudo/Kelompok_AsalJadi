@@ -30,29 +30,27 @@ begin
         readln(pin);
     until pin = acc[i].PIN;
 end;
-var pilih:char; idx:integer;
-begin
-    t_acc := 0;
 
+procedure menu(i:integer);
+var p:char;
+begin
     repeat
         clrscr;
-        writeln('=== MBANKING ===');
-        writeln('1. Register');
-        writeln('2. Login');
-        writeln('3. Keluar');
+        writeln('=== MENU AKUN ===');
+        writeln('User  : ', acc[i].username);
+        writeln('Saldo : Rp', acc[i].balance);
+        writeln;
+        writeln('1. Deposit');
+        writeln('2. Withdraw');
+        writeln('3. Riwayat');
+        writeln('4. Logout');
         write('Pilih: ');
-        pilih := readkey;
+        p := readkey;
 
-        case pilih of
-            '1': regis;
-            '2': begin
-                    idx := pilihAkun;
-                    if idx <> -1 then
-                    begin
-                        login(idx);
-                        menu(idx);
-                    end;
-                 end;
+        case p of
+            '1': deposit(i);
+            '2': withdraw(i);
+            '3': showhis(i);
         end;
-    until pilih = '3';
-end.
+    until p = '4';
+end;
